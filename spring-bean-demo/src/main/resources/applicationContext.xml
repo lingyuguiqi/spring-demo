@@ -5,7 +5,9 @@
         xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
         ">
-    <bean id="chinese" class="com.bean.ChineseImpl">
+
+    <!--bean中属性不重复-->
+    <bean id="chinese" class=" com.bean.demo.normalDemo.ChineseImpl">
         <property name="name">
             <value>小明</value>
         </property>
@@ -13,12 +15,37 @@
             <value>10</value>
         </property>
     </bean>
-    <bean id="american" class="com.bean.AmericanImpl">
+    <bean id="american" class=" com.bean.demo.normalDemo.AmericanImpl">
         <property name="name">
             <value>Tom</value>
         </property>
         <property name="age">
             <value>15</value>
+        </property>
+    </bean>
+    <!-- bean中含有list,map,set属性-->
+    <bean id="rich" class="com.bean.demo.collectionDemo.RichPerson">
+        <property name="cars">
+            <list>
+                <value>BMW</value>
+                <value>GTR</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="poor" class="com.bean.demo.collectionDemo.PoorPerson">
+        <property name="debt">
+            <map>
+                <entry key="张三" value="12345678.90123456"/>
+                <entry key="lisi" value="20000.0000000"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="normal" class="com.bean.demo.collectionDemo.NormalPerson">
+        <property name="relations">
+            <set>
+                <value>王五</value>
+                <value>赵六</value>
+            </set>
         </property>
     </bean>
 </beans>

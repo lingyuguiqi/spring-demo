@@ -1,5 +1,8 @@
-package com.bean;
-public class AmericanImpl implements Person{
+package com.bean.demo.normalDemo;
+
+import com.bean.demo.Person;
+
+public class AmericanImpl implements Person {
     private String name;
     private int age;
     public String getName() {
