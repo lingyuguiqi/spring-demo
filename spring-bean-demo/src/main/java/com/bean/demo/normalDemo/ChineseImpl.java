@@ -1,6 +1,8 @@
-package com.bean;
+package com.bean.demo.normalDemo;
 
-public class ChineseImpl implements Person{
+import com.bean.demo.Person;
+
+public class ChineseImpl implements Person {
     private String name;
     private int age;
 

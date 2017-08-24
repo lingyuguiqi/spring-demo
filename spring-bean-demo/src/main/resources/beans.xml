@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="beanPostProcessor" class="com.bean.source.MyBeanPostProcessor"></bean>
+
+    <bean id="instantiationAwareBeanPostProcessor" class="com.bean.source.MyInstantiationAwareBeanPostProcessor"></bean>
+
+    <bean id="beanFactoryPostProcessor" class="com.bean.source.MyBeanFactoryPostProcessor">
+    </bean>
+
+    <bean id="company" class="com.bean.source.Company" init-method="myInit" destroy-method="myDestory" scope="singleton">
+        <property name="name" value="神恩"/>
+        <property name="address" value="杭州"/>
+        <property name="phone">
+            <value>1888888888</value>
+        </property>
+    </bean>
+
+
+</beans>
